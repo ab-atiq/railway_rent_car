@@ -23,6 +23,7 @@ router.post('/searchedcar', async (req, res) => {
 });
 
 
+
 router.get('/findcar', async (req, res) => {
     const pickup = req.query.pickup
     try {
@@ -32,5 +33,7 @@ router.get('/findcar', async (req, res) => {
         res.status(500).json(error);
     }
 })
+
+
 
 module.exports = router;
