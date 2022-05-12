@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "start-dev": "nodemon server.js",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -34,6 +35,8 @@
   "description": "",
   "devDependencies": {
     "@types/jest": "^27.5.0",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }
