@@ -28,8 +28,11 @@ const chatRoute = require("./router/chatRoute");
 
 // use routes 
 app.use('/api/auth', authRouter);
+app.use('/api/user', userRoute);
 app.use('/api/course', courseRoute);
 app.use('/auth', chatRoute);
+
+
 
 
 
