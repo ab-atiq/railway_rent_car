@@ -5,6 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const ConnectDB = require("./config/ConnectDB");
 
+
 //middleware
 app.use(cors());
 app.use(express.json());
@@ -68,6 +69,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
 
 
 
