@@ -5,18 +5,13 @@ const cors = require("cors");
 require("dotenv").config();
 const ConnectDB = require("./config/ConnectDB");
 
-
 //middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-
 // routes
 
-const serviceRoute = require("./router/serviceRoute");
-// const PaymentRoute = require("./router/PaymentRouter");
 const mainService = require("./router/mainServiceRoute");
 const findcars = require("./router/searchedCarRoute");
 const searchingdRoute = require("./router/searchedCarRoute");
@@ -40,13 +35,8 @@ const newOrderRoute = require("./router/createOrder");
 const userOrders = require("./router/getUserOrders");
 const allOrders = require("./router/getAllOrders");
 
-
-
-
 // use routes
-// app.use("/", PaymentRoute);
 app.use("/api", mainService);
-app.use("/api", serviceRoute);
 app.use("/api", searchingdRoute);
 app.use("/api", singleCar);
 app.use("/api", userDetail);
@@ -62,7 +52,6 @@ app.use("/api", findcars);
 app.use("/api", newOrderRoute);
 app.use("/api", userOrders);
 app.use("/api", allOrders);
-// console.log(newOrderRoute);
 app.use("/api/find", findCarReviewRoute);
 app.use("/api/find", findSingleCarRentRoute);
 app.use("/api/find", sliderSingleBrandCarRoute);
@@ -70,19 +59,10 @@ app.use("/api/find", rentSinCarRouter);
 app.use("/api/find", allCourseRouter);
 app.use("/auth", chatRoute);
 
-
-
-
-
-
-app.get('/', (req, res) => {
-  res.send('hello database');
-})
+app.get("/", (req, res) => {
+  res.send("hello database");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-
-
-
