@@ -34,6 +34,7 @@ const chatRoute = require("./router/chatRoute");
 const newOrderRoute = require("./router/createOrder");
 const userOrders = require("./router/getUserOrders");
 const allOrders = require("./router/getAllOrders");
+const seviceRoute = require("./router/serviceroute");
 
 // use routes
 app.use("/api", mainService);
@@ -58,6 +59,7 @@ app.use("/api/find", sliderSingleBrandCarRoute);
 app.use("/api/find", rentSinCarRouter);
 app.use("/api/find", allCourseRouter);
 app.use("/auth", chatRoute);
+app.use("/api", seviceRoute);
 
 app.get("/", (req, res) => {
   res.send("hello database");

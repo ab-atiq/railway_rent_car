@@ -9,7 +9,6 @@ mongoose
     console.log(err);
   });
 
-  
 async function run() {
   try {
     // await client.connect();
